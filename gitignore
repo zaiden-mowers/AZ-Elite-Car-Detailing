@@ -1,11 +1,1 @@
-﻿# System files
-.DS_Store
-Thumbs.db
 
-
-# Logs
-*.log
-
-
-# Node modules (if used later)
-node_modules/
