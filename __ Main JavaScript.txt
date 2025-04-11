@@ -1,0 +1,122 @@
+﻿// Main JavaScript
+
+
+// Highlight current page in nav (adds .active class to the corresponding menu link)
+document.addEventListener('DOMContentLoaded', () => {
+  const bodyId = document.body.id;
+  if (bodyId) {
+    let navLink;
+    if (bodyId === 'homePage') {
+      navLink = document.querySelector('nav a[href="index.html"]');
+    } else if (bodyId === 'pricingPage') {
+      navLink = document.querySelector('nav a[href="pricing.html"]');
+    } else if (bodyId === 'bookingPage') {
+      navLink = document.querySelector('nav a[href="booking.html"]');
+    }
+    if (navLink) {
+      navLink.classList.add('active');
+    }
+  }
+
+
+  // Homepage animation: car slides in, then business name fades in
+  if (bodyId === 'homePage') {
+    const carImg = document.getElementById('carImage');
+    const businessName = document.getElementById('businessName');
+    if (carImg && businessName) {
+      // Trigger slide-in animation for car image
+      carImg.classList.add('slide-in');
+      // After a delay, reveal the business name
+      setTimeout(() => {
+        businessName.classList.add('fade-in');
+      }, 1000);
+    }
+  }
+
+
+  // Pricing page: tab switching functionality
+  if (bodyId === 'pricingPage') {
+    const tabs = document.querySelectorAll('.tabs li');
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Deactivate all tabs and hide all content sections
+        tabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        // Activate clicked tab and its corresponding content
+        tab.classList.add('active');
+        const targetId = tab.getAttribute('data-target');
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+          targetContent.classList.add('active');
+        }
+      });
+    });
+  }
+
+
+  // Booking page: EmailJS integration for form submission
+  if (bodyId === 'bookingPage') {
+    // Initialize EmailJS with your Public Key
+    emailjs.init('EfRfatGZh5XjnIH8k');
+    const form = document.getElementById('bookingForm');
+    const statusMsg = document.getElementById('statusMessage');
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Collect form input values
+        const formData = {
+          full_name: document.getElementById('fullName').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          vehicle: document.getElementById('vehicle').value,
+          package_type: document.getElementById('packageType').value,
+          package_tier: document.getElementById('packageTier').value,
+          date: document.getElementById('date').value,
+          time: document.getElementById('time').value,
+          notes: document.getElementById('notes').value
+        };
+        // **Optional**: Check availability via backend (placeholder example)
+        // fetch('/availability', {
+        //   method: 'POST',
+        //   headers: {'Content-Type': 'application/json'},
+        //   body: JSON.stringify({ date: formData.date, time: formData.time })
+        // })
+        // .then(res => res.json())
+        // .then(data => {
+        //   if (!data.available) {
+        //     statusMsg.textContent = 'Selected time is not available. Please choose a different slot.';
+        //     statusMsg.className = 'error';
+        //     return;
+        //   } else {
+        //     // Proceed to send email if available
+        //   }
+        // });
+
+
+        // Send booking request email via EmailJS
+        emailjs.send('service_8h9ln1a', 'template_mol05y5', formData)
+          .then(() => {
+            // Success: show confirmation message to user
+            statusMsg.textContent = 'Booking request sent! Thank you. We will confirm your appointment shortly.';
+            statusMsg.className = 'success';
+            statusMsg.style.display = 'block';
+            form.reset();
+          }, error => {
+            console.error('EmailJS error:', error);
+            statusMsg.textContent = 'Failed to send request. Please try again or contact us directly.';
+            statusMsg.className = 'error';
+            statusMsg.style.display = 'block';
+          });
+
+
+        // **Optional**: After successful email, call backend to finalize booking (placeholder)
+        // fetch('/book', {
+        //   method: 'POST',
+        //   headers: {'Content-Type': 'application/json'},
+        //   body: JSON.stringify(formData)
+        // });
+      });
+    }
+  }
+});

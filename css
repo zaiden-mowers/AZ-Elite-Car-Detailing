@@ -1,0 +1,204 @@
+﻿/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+nav {
+  background: #222;
+  color: #fff;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+nav .logo {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin-left: 1em;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+nav ul li a.active {
+  text-decoration: underline;
+}
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4em 1em 2em;
+}
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+}
+#carImage {
+  max-width: 100%;
+  transform: translateX(-150%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+#businessName {
+  font-size: 2em;
+  color: #333;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.tagline {
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+.hero .btn {
+  margin-top: 1em;
+}
+
+
+/* Content Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+
+/* Pricing Tabs */
+.tabs {
+  list-style: none;
+  display: flex;
+  margin: 1em 0;
+  padding: 0;
+  border-bottom: 2px solid #ddd;
+}
+.tabs li {
+  margin: 0 1em 0 0;
+  padding: 0.5em 0;
+  cursor: pointer;
+  color: #333;
+}
+.tabs li.active {
+  border-bottom: 3px solid #3498db;
+  color: #3498db;
+  font-weight: bold;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+
+/* Pricing Packages */
+.packages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 1em 0;
+}
+.package {
+  flex: 1;
+  min-width: 200px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1em;
+}
+.package h4 {
+  margin-top: 0;
+}
+.package .price {
+  font-weight: bold;
+  margin: 0.5em 0;
+  font-size: 1.1em;
+}
+.package ul {
+  margin: 0.5em 0;
+  padding-left: 1.2em;
+}
+.addons-info {
+  margin: 2em 0;
+}
+.addons-info h3 {
+  margin-bottom: 0.5em;
+}
+.addons-info p {
+  font-style: italic;
+  color: #555;
+  font-size: 0.9em;
+}
+
+
+/* Booking Form */
+form {
+  margin: 1em 0;
+}
+.form-group {
+  margin-bottom: 1em;
+}
+label {
+  display: block;
+  font-weight: 600;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.3em;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.inline-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.inline-group .form-group {
+  flex: 1;
+}
+.btn {
+  background: #3498db;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.btn:hover {
+  background: #1d6fa5;
+}
+#statusMessage {
+  margin-top: 1em;
+}
+.success {
+  color: green;
+  font-weight: bold;
+}
+.error {
+  color: red;
+  font-weight: bold;
+}

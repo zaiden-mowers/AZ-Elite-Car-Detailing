@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en" id="pricingPage">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Car Detailing - Pricing</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Elite Car Detailing</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="booking.html">Booking</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="container">
+    <h1>Our Services & Pricing</h1>
+    <p class="promo">As a local special, Snowflake area residents get <strong>10% off</strong> their first detail!</p>
+
+
+    <ul class="tabs">
+      <li data-target="interior" class="active">Interior</li>
+      <li data-target="exterior">Exterior</li>
+      <li data-target="both">Both</li>
+    </ul>
+
+
+    <div id="interior" class="tab-content active">
+      <h2>Interior Detailing Packages</h2>
+      <div class="packages">
+        <div class="package">
+          <h4>Basic Interior</h4>
+          <p class="price">$60</p>
+          <ul>
+            <li>Vacuum carpets and seats</li>
+            <li>Wipe down dash, console, and door panels</li>
+            <li>Clean interior windows & mirrors</li>
+            <li>Basic door jamb cleaning</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h4>Complete Interior</h4>
+          <p class="price">$100</p>
+          <ul>
+            <li>Includes Basic Interior services</li>
+            <li>Shampoo carpets and cloth seats</li>
+            <li>Leather seat conditioning (if applicable)</li>
+            <li>Deep clean vinyl/plastic trim with UV protectant</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h4>Premium Interior</h4>
+          <p class="price">$150</p>
+          <ul>
+            <li>Includes Complete Interior services</li>
+            <li>Steam cleaning of upholstery and floor mats</li>
+            <li>Intensive stain and odor treatment</li>
+            <li>Detailed crevice cleaning & sanitization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="exterior" class="tab-content">
+      <h2>Exterior Detailing Packages</h2>
+      <div class="packages">
+        <div class="package">
+          <h4>Basic Exterior</h4>
+          <p class="price">$50</p>
+          <ul>
+            <li>Pre-wash rinse & foam bath</li>
+            <li>Hand wash with two-bucket method</li>
+            <li>Wheel and tire cleaning</li>
+            <li>Dry with microfiber towels</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h4>Complete Exterior</h4>
+          <p class="price">$90</p>
+          <ul>
+            <li>Includes Basic Exterior services</li>
+            <li>Bug and tar residue removal</li>
+            <li>Tire shine application</li>
+            <li>Clay bar treatment + hand wax (3-month protection)</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h4>Premium Exterior</h4>
+          <p class="price">$140</p>
+          <ul>
+            <li>Includes Complete Exterior services</li>
+            <li>Advanced paint sealant (6-month protection)</li>
+            <li>Extended bug/tar removal & paint decontamination</li>
+            <li>Exterior plastics conditioned</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="both" class="tab-content">
+      <h2>Full Interior & Exterior Packages</h2>
+      <div class="packages">
+        <div class="package">
+          <h4>Basic (Inside & Out)</h4>
+          <p class="price">$100</p>
+          <ul>
+            <li>Basic Exterior wash (foam, wheels, dry)</li>
+            <li>Basic Interior cleaning (vacuum, wipe-down, glass)</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h4>Complete (Inside & Out)</h4>
+          <p class="price">$180</p>
+          <ul>
+            <li>All services from Complete Interior & Exterior</li>
+            <li>Exterior: hand wax + tire shine</li>
+            <li>Interior: carpet shampoo + leather conditioning</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h4>Premium (Inside & Out)</h4>
+          <p class="price">$270</p>
+          <ul>
+            <li>All services from Premium Interior & Exterior</li>
+            <li>Exterior: paint sealant applied</li>
+            <li>Interior: full interior steam cleaning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="addons-info">
+      <h3>Optional Add-ons</h3>
+      <ul>
+        <li>Pet Hair Removal – $25</li>
+        <li>Engine Bay Detailing – $40</li>
+        <li>Headlight Restoration – $40</li>
+      </ul>
+      <p>*Add-ons can be added to any package above.</p>
+    </div>
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

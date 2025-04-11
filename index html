@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en" id="homePage">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Car Detailing - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Elite Car Detailing</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="booking.html">Booking</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <img id="carImage" src="https://via.placeholder.com/800x400?text=Clean+Car" alt="Clean car">
+      <h1 id="businessName">Elite Car Detailing</h1>
+    </div>
+    <p class="tagline">Your car, our care. Experience the shine of a professional detail.</p>
+    <a href="booking.html" class="btn">Book Now</a>
+  </section>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

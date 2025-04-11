@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en" id="bookingPage">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Car Detailing - Booking</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Elite Car Detailing</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="booking.html">Booking</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="container">
+    <h1>Book a Detailing Appointment</h1>
+    <p>Fill out the form below to request your detailing service. We will contact you to confirm your appointment and details.</p>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="full_name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="vehicle">Vehicle (Make/Model)</label>
+        <input type="text" id="vehicle" name="vehicle" required>
+      </div>
+      <div class="inline-group">
+        <div class="form-group">
+          <label for="packageType">Package Type</label>
+          <select id="packageType" name="package_type" required>
+            <option value="" disabled selected>Select Type</option>
+            <option value="Interior">Interior</option>
+            <option value="Exterior">Exterior</option>
+            <option value="Both">Both (Interior + Exterior)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="packageTier">Package Tier</label>
+          <select id="packageTier" name="package_tier" required>
+            <option value="" disabled selected>Select Tier</option>
+            <option value="Basic">Basic</option>
+            <option value="Complete">Complete</option>
+            <option value="Premium">Premium</option>
+          </select>
+        </div>
+      </div>
+      <div class="inline-group">
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Preferred Time</label>
+          <input type="time" id="time" name="time" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn">Book Now</button>
+    </form>
+    <p id="statusMessage" style="display:none;"></p>
+  </main>
+
+
+  <!-- EmailJS SDK (for sending emails) -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
